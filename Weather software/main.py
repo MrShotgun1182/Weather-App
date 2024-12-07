@@ -51,14 +51,14 @@ def get_weather():
 # make defult window
 root = tk.Tk()
 root.title("Weather app")
-root.geometry("900x500+300+200")
-root.resizable(False, False)
+root.geometry("900x500+300+200") # can set the size of window
+root.resizable(False, False) # user can't change window size
 
-# add top serch place
+# add serch box
 top_img = tk.PhotoImage(file="search.png")
 top_img_label = tk.Label(root, image=top_img)
 top_img_label.pack(side=tk.TOP, pady=20)
-
+# config  top_img
 textfile = tk.Entry(root, justify="center",
                     width=25,
                     font=("poppins", 15, "bold"),
@@ -119,6 +119,7 @@ wind_label = tk.Label(root, text="...",
                       bg="#1ab5ef", fg="#404040")
 wind_label.place(x=700, y=420)
 
+## humidity
 buttom_label2 = tk.Label(root, text="HUMIDITY",
                         font=("Helvetica", 15, "bold"),
                         fg="white", bg="#1ab5ef"
@@ -131,6 +132,7 @@ HUMIDITY_label = tk.Label(root, text="...",
                       bg="#1ab5ef", fg="#404040")
 HUMIDITY_label.place(x=500, y=420)
 
+## description
 buttom_label3 = tk.Label(root, text="DESCRIPTION",
                         font=("Helvetica", 15, "bold"),
                         fg="white", bg="#1ab5ef"
@@ -143,6 +145,7 @@ DESCRIPTION_label = tk.Label(root, text="...",
                       bg="#1ab5ef", fg="#404040")
 DESCRIPTION_label.place(x=300, y=420)
 
+## pressure
 buttom_label4 = tk.Label(root, text="PRESSURE",
                         font=("Helvetica", 15, "bold"),
                         fg="white", bg="#1ab5ef"
@@ -166,5 +169,5 @@ condition_label = tk.Label(root, font=("arial", 20, "bold"),
 condition_label.place(x=550, y=270)
 
 
-
+# for run app we must run this code and set own code in mainloop
 root.mainloop()
